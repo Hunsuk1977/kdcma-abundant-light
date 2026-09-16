@@ -1,0 +1,30 @@
+{
+  "source": "semantic conversion of course-data-all.js with audited chapters from studio/초기-교재-백업.json",
+  "readerEdition": "2026-09-09",
+  "contentRevision": "complete-reader-boundaries-12",
+  "auditedIndexes": {
+    "ko": [
+      0,
+      1,
+      2
+    ],
+    "en": [
+      0,
+      1,
+      16,
+      17
+    ],
+    "es": [
+      0,
+      1,
+      16,
+      17
+    ]
+  },
+  "languages": {
+    "ko": 20,
+    "en": 20,
+    "es": 20
+  },
+  "assets": 47
+}

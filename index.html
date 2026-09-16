@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>풍요로운 빛 · 성경공부</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#lessonContent">본문으로 이동</a>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="풍요로운 빛 처음으로">
+      <span class="brand-mark" aria-hidden="true">빛</span>
+      <span class="brand-copy"><strong id="courseTitle">풍요로운 빛</strong><small id="courseLabel">성경공부</small></span>
+    </a>
+    <div class="top-actions">
+      <label class="language-control">
+        <span class="sr-only">언어</span>
+        <select id="language">
+          <option value="ko">한국어</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+      </label>
+      <button id="contentsToggle" class="icon-button" type="button" aria-expanded="false" aria-controls="chapterPanel">
+        <span aria-hidden="true">☰</span><span id="contentsLabel">목차</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside id="chapterPanel" class="chapter-panel" aria-label="목차">
+      <div class="panel-heading">
+        <p id="courseKicker" class="eyebrow">20과 성경 여정</p>
+        <h2 id="chaptersHeading">과목차</h2>
+      </div>
+      <nav id="chapterList" class="chapter-list"></nav>
+      <div class="panel-footer">
+        <button id="downloadAnswers" class="text-button" type="button">내 답 내려받기</button>
+        <p id="storageNote">답은 이 기기에 자동 저장됩니다.</p>
+      </div>
+    </aside>
+
+    <main id="lessonContent" class="reader" tabindex="-1">
+      <section class="lesson-header">
+        <div>
+          <p id="lessonNumber" class="eyebrow"></p>
+          <h1 id="lessonTitle"></h1>
+          <p id="lessonDescription" class="lesson-description"></p>
+        </div>
+        <div id="chapterProgress" class="chapter-progress" aria-live="polite"></div>
+      </section>
+
+      <div class="stage-tabs" role="tablist" aria-label="학습 단계">
+        <button id="lessonTab" type="button" role="tab" data-stage="lesson" aria-selected="true">수업</button>
+        <button id="reviewTab" type="button" role="tab" data-stage="review" aria-selected="false">복습</button>
+      </div>
+
+      <div id="questionList" class="question-list" role="tabpanel"></div>
+
+      <nav class="lesson-nav" aria-label="과 이동">
+        <button id="previousChapter" type="button">← <span>이전 과</span></button>
+        <button id="nextChapter" class="primary-button" type="button"><span>다음 과</span> →</button>
+      </nav>
+    </main>
+  </div>
+
+  <div id="saveStatus" class="save-status" role="status" aria-live="polite"></div>
+  <script src="course-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
